@@ -1,9 +1,11 @@
 import '../styles/globals.css'
 import { Aladin } from '@next/font/google'
+import Layout from '../components/layout'
 const al = Aladin( { subsets: [ 'latin' ] , weight:'400' } ) 
 
 export default function App( { Component, pageProps } ) {
-  return(
+  return (
+    <Layout>
   <>
     <style jsx global>{ `
         h1 {
@@ -15,6 +17,7 @@ export default function App( { Component, pageProps } ) {
       `}</style>
 
     <Component { ...pageProps } />
-    </>
+      </>
+    </Layout>
   )
 }

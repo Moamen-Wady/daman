@@ -16,10 +16,6 @@ export default function Aboutus() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Navbar />
-            <Ul />
-            <Banner />
-
 
             <div className={ styles.aboutcont }>
                 <div className={ styles.first }>
@@ -70,8 +66,6 @@ export default function Aboutus() {
                     </div>
                 </div>
             </div>
-            <Prefooter />
-            <Footer />
         </>
     )
 }

@@ -16,9 +16,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Navbar />
-      <Ul />
-      <Banner />
       <div className={ styles.whyuscont }>
         <h1> Hire Us For</h1>
         <div className={ styles.whyus }>
@@ -41,7 +38,7 @@ export default function Home() {
         <hr style={ { width: '80%' } } />
       </div>
 
-      
+
       <div className={ styles.idea }>
         <img src='idea.jpg' alt='Motivational Business Quote' />
         <p>
@@ -81,9 +78,9 @@ export default function Home() {
       </div>
       <hr style={ { width: '80%' } } />
 
-      
+
       <div className={ styles.advcont }>
-          <h1>Why Choose Us Exactly?</h1>
+        <h1>Why Choose Us Exactly?</h1>
         <div className={ styles.adv }>
           <p> We are the right term for your business.
             We have the expertise and knowledge to offer impartial advice and services at an honest price.
@@ -100,19 +97,17 @@ export default function Home() {
         </div>
         <hr style={ { width: '80%' } } />
       </div>
-      
-      
+
+
       <div className={ styles.clientscont }>
-        <h1> Clients We've Worked With</h1>
-      <div className={ styles.clients }>
-      <img src='star.png' alt=''/>
-      <img src='star.png' alt=''/>
-      <img src='star.png' alt=''/>
-      <img src='star.png' alt=''/>
+        <h1> Clients We&apos;ve Worked With</h1>
+        <div className={ styles.clients }>
+          <img src='star.png' alt='' />
+          <img src='star.png' alt='' />
+          <img src='star.png' alt='' />
+          <img src='star.png' alt='' />
+        </div>
       </div>
-      </div>
-      <Prefooter />
-      <Footer/>
     </>
   )
 }

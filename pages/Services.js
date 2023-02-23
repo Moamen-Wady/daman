@@ -15,9 +15,7 @@ export default function Services() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Navbar />
-            <Ul />
-            <Banner />
+
             <div className={ styles.servcont }>
                 <h1> How Can We Help You?</h1>
                 <div className={ styles.serv }>
@@ -53,10 +51,10 @@ export default function Services() {
                     </div>
                 </div>
             </div>
-                <hr style={ { width: '80%' } } />
+            <hr style={ { width: '80%' } } />
 
             <div className={ styles.clientscont }>
-                <h1> Clients We've Worked With</h1>
+                <h1> Clients We&apos;ve Worked With</h1>
                 <div className={ styles.clients }>
                     <img src='star.png' alt='' />
                     <img src='star.png' alt='' />
@@ -64,8 +62,6 @@ export default function Services() {
                     <img src='star.png' alt='' />
                 </div>
             </div>
-            <Prefooter />
-            <Footer/>
         </>
     )
 }

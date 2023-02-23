@@ -46,7 +46,7 @@ export default function Banner() {
                 <img src='3.jpg' alt='' className={ styles.bg } />
             </div>
             <div id={ 3 } className={ styles.slz }>
-                <p className={ styles.txtx }>Join Our Family...<br /><br />Now! <br /><br /><a href='/Contactus' className={styles.lnkbtn}>Contact Us</a> </p>
+                <p className={ styles.txtx }>Join Our Family...<br /><br />Now! <br /><br /><Link href='/Contactus' className={styles.lnkbtn}>Contact Us</Link> </p>
                 <img src='btw.png' alt='' className={styles.mid}/>
                 <img src='4.jpg' alt='' className={ styles.bg } />
             </div>
