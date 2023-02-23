@@ -1,0 +1,100 @@
+.aboutcont {
+    width: 95%;
+    margin: auto;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+.first {
+    max-width: 95%;
+    margin: auto;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+.first h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: var(--rem3);
+    color: goldenrod;
+}
+
+.first p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    text-align-last: center;
+    font-size: calc(var(--rem1) * 1.1);
+    text-transform: capitalize;
+}
+
+.snd {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+.snd ul {
+    max-width: 45%;
+    font-family: "Courier New", Courier, monospace;
+    display: inline-block;
+    font-size: calc(var(--rem1) * 1.5);
+    text-transform: capitalize;
+    font-weight: 700;
+    list-style-type: disc;
+}
+
+.snd li{
+margin-top: var(--rem1);
+}
+
+.snd img {
+    display: inline-block;
+    max-width: 40%;
+    border-radius: 5%;
+}
+
+.thrd {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.thrd h1 {
+    font-family: "Times New Roman", Times, serif;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: var(--rem3);
+    color: goldenrod;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+    text-decoration: underline;
+}
+.subthrd {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+
+.subthrd p {
+    width: max-content;
+    text-align: justify;
+    max-width: 50%;
+    font-size: calc(var(--rem1) * 1.4);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    color: goldenrod;
+    margin: var(--rem1);
+    display: inline;
+    text-transform: capitalize;
+    font-weight: 700;
+}

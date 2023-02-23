@@ -1,0 +1,83 @@
+.servcont {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-top: var(--rem1);
+    margin-bottom: var(--rem2);
+    background-color: rgb(255, 215, 0, 0.4);
+}
+
+.servcont h1 {
+    font-size: var(--rem3);
+    color: var(--black2);
+    display: block;
+    margin: auto;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.serv {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.telt {
+    width: 31%;
+    height: 100%;
+    background-color: rgb(192, 192, 192, 0.4);
+    padding: var(--rem05);
+}
+
+.telt h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--rem2);
+    color: goldenrod;
+    margin: var(--rem05);
+    text-decoration: underline;
+}
+
+.telt p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: calc(var(--rem1) * 1.2);
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.telt ul {
+    font-family: sans-serif;
+    font-size: calc(var(--rem1) * 1.2);
+    text-transform: capitalize;
+    text-align: left;
+    text-align-last: left;
+    color: var(--black2);
+}
+
+.telt li {
+    margin-top: var(--rem1);
+}
+
+.clientscont {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+.clients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: var(--rem05);
+    margin: auto;
+    text-align: center;
+}
+.clients img {
+    width: 25%;
+    display: block;
+    margin: auto;
+}

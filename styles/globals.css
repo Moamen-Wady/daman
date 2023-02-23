@@ -1,0 +1,106 @@
+@media only screen and (min-width: 2000px) {
+    :root {
+        --rem05: 1rem;
+        --rem1: 2rem;
+        --rem105: 3rem;
+        --rem2: 4rem;
+        --rem3: 6rem;
+        --rem35: 7rem;
+        --rem4: 8rem;
+        --rem5: 6rem;
+    }
+}
+@media only screen and (max-width: 1999px) {
+    :root {
+        --rem05: 0.75rem;
+        --rem1: 1.5rem;
+        --rem105: 2.25rem;
+        --rem2: 3rem;
+        --rem3: 4.5rem;
+        --rem35: 5rem;
+        --rem4: 6rem;
+        --rem5: 7.5rem;
+    }
+}
+@media only screen and (max-width: 1620px) {
+    :root {
+        --rem05: 0.5rem;
+        --rem1: 1rem;
+        --rem105: 1.5rem;
+        --rem2: 2rem;
+        --rem3: 3rem;
+        --rem35: 3.5rem;
+        --rem4: 4rem;
+        --rem5: 5rem;
+    }
+}
+@media only screen and (max-width: 1365px) {
+    :root {
+        --rem05: 0.4rem;
+        --rem1: 0.8rem;
+        --rem105: 1.2rem;
+        --rem2: 1.6rem;
+        --rem3: 2.4rem;
+        --rem35: 2.8rem;
+        --rem4: 3.2rem;
+        --rem5: 4rem;
+    }
+}
+@media only screen and (max-width: 999px) {
+    :root {
+        --rem05: 0.25rem;
+        --rem1: 0.5rem;
+        --rem105: .75rem;
+        --rem2: 1rem;
+        --rem3: 1.5rem;
+        --rem35: 1.75rem;
+        --rem4: 2rem;
+        --rem5: 2.5rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    :root {
+        --rem05: 0.125rem;
+        --rem1: 0.25rem;
+        --rem105: .375rem;
+        --rem2: 0.5rem;
+        --rem3: 0.75rem;
+        --rem35: 0.875rem;
+        --rem4: 1rem;
+        --rem5: 1.25rem;
+    }
+}
+:root {
+--black : rgb(26, 24, 24);
+--black2 : rgb(48, 43, 43);
+--gold : rgb(219, 216, 28);
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 200vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
+}

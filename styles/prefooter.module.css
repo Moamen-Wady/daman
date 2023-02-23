@@ -1,0 +1,71 @@
+.prf {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    border: 2px dashed goldenrod;
+    width: 80%;
+    margin: auto;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+    padding: var(--rem05);
+}
+
+.left {
+    width: 100%;
+
+}
+
+.left p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: calc(var(--rem1) * 1.2);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.left h1{
+    font-size: var(--rem3);
+    color: rgb(85, 66, 21);
+    text-align: center;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem2);
+}
+
+.right {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.right h1 {
+    font-size: var(--rem3);
+    color: rgb(85, 66, 21);
+    text-align: center;
+    margin-top: var(--rem1);
+    margin-bottom: var(--rem1);
+
+
+}
+
+.right span {
+    border-radius: 5%;
+    background-color: goldenrod;
+    padding: var(--rem1);
+    display: inline-block;
+    font-size: var(--rem2);
+    cursor: pointer;
+    margin-left: var(--rem1);
+    margin-right: var(--rem1);
+    text-transform:capitalize;
+
+}
+
+.right span:hover {
+    background-color: gold;
+}
+.right p {
+display: inline-block;
+    font-family:cursive ;
+    font-size: calc(var(--rem1) * 1.2);
+    text-transform: capitalize;
+    text-align: center;
+}

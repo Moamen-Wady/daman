@@ -1,0 +1,82 @@
+.xcon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background: linear-gradient(goldenrod , rgb(99, 84, 0));
+    padding: var(--rem1);
+    border-top: 1px solid black;
+}
+
+.pimg {
+    text-align: left;
+    font-size: var(--rem1);
+}
+
+.portion {
+    display: inline-block;
+    width: 50%;
+    color: white;
+}
+
+.portion > .title {
+    color: white;
+    font-size: calc(var(--rem1) * 1.25);
+}
+
+.tenp {
+    background-color: var(--black2);
+    padding: var(--rem1);
+}
+
+.ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    z-index: 5000;
+    font-size: calc(var(--rem1) * 1.25);
+    font-family: sans-serif;
+    color: black;
+}
+.l {
+    display: inline-block;
+    padding: var(--rem1);
+}
+.ll {
+display: inline-block;
+}
+.l .ll:hover {
+    color: var(--black2);
+}
+
+.img {
+    width: calc(var(--rem35) * 2);
+    height: calc(var(--rem35) * 2);
+    margin: auto;
+}
+
+.lgs img {
+    width: var(--rem2);
+    height: var(--rem2);
+    margin: var(--rem05);
+    background-color: black;
+    border-radius: 100%;
+}
+
+.lgs img:hover {
+    border: 0.1px inset transparent;
+}
+
+.lgs {
+width: 50%;
+text-align: center;
+margin: auto;
+border: 0;
+}
+.contact img {
+    width: var(--rem2);
+    height: var(--rem2);
+    margin: var(--rem05);
+    display: inline;
+    vertical-align: middle;
+}

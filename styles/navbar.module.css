@@ -1,0 +1,101 @@
+.nvbr {
+    background: linear-gradient(var(--black), var(--black2));
+    display: block;
+}
+
+.topbar {
+    margin: 0;
+}
+
+.topbar > div {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar p {
+    color: goldenrod;
+    display: inline-block;
+    font-size: var(--rem1);
+}
+
+.lgs img {
+    width: var(--rem2);
+    height: var(--rem2);
+    margin: var(--rem05);
+}
+
+.lgs img:hover {
+    border: 0.1px inset transparent;
+}
+
+.ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    z-index: 5000;
+    font-size: calc(var(--rem1) * 1.25);
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(var(--black2), var(--black));
+    transition-property: position;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.l {
+    float: left;
+    margin-left: var(--rem05);
+    margin-right: var(--rem05);
+}
+
+.r {
+    float: right;
+    margin-left: var(--rem05);
+    margin-right: var(--rem05);
+}
+
+.r .ll {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: var(--rem105);
+    border-radius: 5%;
+    height: var(--rem5);
+}
+
+.r .ll:hover {
+    background-color: goldenrod;
+}
+
+.l .ll {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: var(--rem105);
+    border-radius: 5%;
+    height: var(--rem5);
+    margin: auto;
+}
+.l .ll p {
+    margin: 0;
+}
+.r .ll p {
+    margin: 0;
+}
+
+.l .ll:hover {
+    background-color: goldenrod;
+    border: 1px inset wheat;
+}
+
+.img {
+    width: calc((var(--rem4)) + (var(--rem05)));
+    height: calc((var(--rem4)) + (var(--rem05)));
+}

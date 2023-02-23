@@ -1,0 +1,56 @@
+.head {
+    height: calc(var(--rem4) * 8);
+    position: relative;
+    width: 100%;
+}
+
+.txtx {
+    z-index: 3;
+    color: hsl(0, 0%, 96%);
+    text-align: justify;
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    font-size: var(--rem3);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: capitalize;
+}
+.txtx strong {
+color: goldenrod;
+background-image: url('/public/btw.png');
+}
+.mid {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.slz {
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.lnkbtn {
+border-radius: 5%;
+background-color: goldenrod;
+color: white;
+padding: var(--rem1);
+}
+
+.lnkbtn:hover {
+background-color: yellow;
+}
