@@ -2,6 +2,8 @@ import React from 'react'
 import styles from '../styles/banner.module.css'
 import { useState , useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Banner() {
 
     var [ z, setZ ] = useState( 0 );
@@ -46,7 +48,7 @@ export default function Banner() {
                 <img src='3.jpg' alt='' className={ styles.bg } />
             </div>
             <div id={ 3 } className={ styles.slz }>
-                <p className={ styles.txtx }>Join Our Family...<br /><br />Now! <br /><br /><Link href='/Contactus' className={styles.lnkbtn}>Contact Us</Link> </p>
+                <p className={ styles.txtx }>Join Our Family...<br /><br />Now! <br /><br /><Link href='./Contactus' className={styles.lnkbtn}>Contact Us</Link> </p>
                 <img src='btw.png' alt='' className={styles.mid}/>
                 <img src='4.jpg' alt='' className={ styles.bg } />
             </div>

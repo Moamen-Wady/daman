@@ -11,9 +11,9 @@ export default function Prefooter() {
             </div>
             <div className={styles.right}>
                 <h1>Don’t Hesitate</h1>
-                <Link href='/Contactus'><span>Contact Us Now !</span></Link>
+                <Link href='./Contactus'><span>Contact Us Now !</span></Link>
                 <p>OR</p>
-                <Link href='/Services'><span>Learn More.</span></Link>
+                <Link href='./Services'><span>Learn More.</span></Link>
             </div>
         </div>
     )

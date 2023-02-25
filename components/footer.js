@@ -2,13 +2,14 @@ import React from 'react'
 import styles from '../styles/footer.module.css'
 import Link from 'next/link'
 
+
 export default function Footer() {
   return (
     <footer className={ styles.ff }>
       <div className={ styles.xcon }>
         <div className={ styles.portion }>
           <div className={ styles.pimg }>
-            <img className={ styles.img } src='/logo.png' alt='' /><br />
+            <img className={ styles.img } src='logo.png' alt='' /><br />
           </div>
           <div className={ styles.contact }>
             <h1>Quick Contact Info</h1>
@@ -34,10 +35,10 @@ export default function Footer() {
 
         <div className={ styles.portion }>
           <ul className={ styles.ul }>
-            <li className={ styles.l }><Link href='/' className={ styles.ll }><p>Home</p></Link></li>
-            <li className={ styles.l }><Link href='/Services ' className={ styles.ll }><p>Services</p></Link></li>
-            <li className={ styles.l }><Link href='/Aboutus' className={ styles.ll }><p>About Us</p></Link></li>
-            <li className={ styles.l }><Link href='/Contactus' className={ styles.ll }><p>Contact Us Now !</p></Link></li>
+            <li className={ styles.l }><Link href='./' className={ styles.ll }><p>Home</p></Link></li>
+            <li className={ styles.l }><Link href='./Services ' className={ styles.ll }><p>Services</p></Link></li>
+            <li className={ styles.l }><Link href='./Aboutus' className={ styles.ll }><p>About Us</p></Link></li>
+            <li className={ styles.l }><Link href='./Contactus' className={ styles.ll }><p>Contact Us Now !</p></Link></li>
           </ul>
           <div className={ styles.lgs }>
             <a
