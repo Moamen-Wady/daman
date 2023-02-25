@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { Aladin } from '@next/font/google'
+import { Aladin } from "next/font/google";
 import Layout from '../components/layout'
 const al = Aladin( { subsets: [ 'latin' ] , weight:'400' } ) 
 
