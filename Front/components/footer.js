@@ -24,10 +24,10 @@ export default function Footer() {
               <img src='location.png' alt='location' /> 2130 Fulton Street, San Francisco
             </p>
             <p>
-              <img src='phone.png' alt='phone' /> <a>+(15) 94117-1080</a>
+              <img src='phone.png' alt='phone' /> <a href="tel:0547807870">0547807870</a>
             </p>
             <p>
-              <img src='mail.png' alt='mail' /> <a>support@test.com</a>
+              <img src='mail.png' alt='mail' /> <a href="mailto:">support@test.com</a>
             </p>
           </div>
         </div>
