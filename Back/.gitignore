@@ -1,3 +1,6 @@
 node_modules
 build
+<<<<<<< HEAD
 .gitignore
+=======
+>>>>>>> 44c28bdb0ef403b59c80b0aa5164b821defcb0a8
