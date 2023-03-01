@@ -26,6 +26,7 @@ background-image: url('/public/btw.png');
     top: 0;
     left: 0;
     z-index: 2;
+    opacity: .5;
 }
 
 .bg {

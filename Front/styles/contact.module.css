@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: var(--rem2);
+    margin-bottom: var(--rem2);
+}
+
+.form {
+    width: 93%;
+    background-color: goldenrod;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 3px solid black;
+    margin-top: var(--rem2);
+    margin-bottom: var(--rem2);
+    margin-left: var(--rem2);
+}
+.form1 {
+    width: calc(var(--rem5)*12);
+    background-color: var(--black2);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 3px solid black;
+    margin: auto;
+    margin-top: var(--rem2);
+    margin-bottom: var(--rem2);
+    padding: calc(var(--rem05)*.1);
+}
+
+.form p {
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: calc(var(--rem1) * 1.2);
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form img {
+    width: calc(var(--rem5) * 1.5);
+    height: calc(var(--rem5) * 1.5);
+}
+
+.form input {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgb(240, 234, 186);
+    color: black;
+    height: var(--rem2);
+    font-size: calc(var(--rem1) * 1.25);
+}
+.form span {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+    border: 2px solid black;
+    height: var(--rem2);
+    width: 25%;
+    cursor: pointer;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+}
+.form span > p {
+    color: var(--black2);
+    font-family: monospace;
+    font-size: calc(var(--rem1) * 1 );
+    display: inline;
+    margin: auto;
+    width: 100%;
+    vertical-align:super;
+}
+.form span:hover {
+    background-color: rgb(255, 251, 0);
+    color: white;
+    transform: scale(1.1);
+}
+
+.map {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.map iframe {
+    width: 90%;
+    height: calc(var(--rem5) * 5);
+    display: block;
+    margin: auto;
+    border: 1px solid gold;
+}

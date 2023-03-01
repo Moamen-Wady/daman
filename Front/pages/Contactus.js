@@ -1,7 +1,48 @@
 import Head from 'next/head'
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import styles from '../styles/contact.module.css'
+import api from '../components/api.js'
 export default function Contactus() {
+    var [ name, setname ] = useState( '' )
+    var [ phone, setphone ] = useState('')
+    var [ note, setnote ] = useState( '' )
+    var [ activity, setactivity ] = useState( '' )
+    var [ residence, setresidence ] = useState( '' )
+
+    const handleChange1 = ( event ) => {
+        var value = event.target.value;
+        setname( value );
+    };
+
+    const handleChange2 = ( event ) => {
+        var value = event.target.value;
+        setphone( value );
+    };
+    const handleChange4 = ( event ) => {
+        var value = event.target.value;
+        setactivity( value );
+    };
+
+    const handleChange3 = ( event ) => {
+        var value = event.target.value;
+        setresidence( value );
+    };
+
+    const handleChange5 = ( event ) => {
+        var value = event.target.value;
+        setnote( value );
+    };
+
+    const send = async () => {
+        const respon = await ( await api.post( '/mail' ), {
+            name: name,
+            phone: phone,
+            residence: residence,
+            note: note,
+            activity: activity
+        } ).data;
+    }
+
     return (
         <>
             <Head>
@@ -10,6 +51,29 @@ export default function Contactus() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="favicon.png" />
             </Head>
+            <div className={ styles.container }>
+                
+                <div className={ styles.form1 }>
+                <div className={ styles.form }>
+                    <img src='/logo.png' alt='' />
+                    <p>
+                        Required Informations
+                    </p>
+                    <form>
+                        <input type='text' placeholder='Name / الاسم' onChange={ handleChange1 } />
+                        <input type='text' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
+                        <input type='text' placeholder='Activity / نوع النشاط' onChange={ handleChange3 } />
+                        <input type='text' placeholder='Number of Residences or Investors / عدد الاقامات او المستثمرين' onChange={ handleChange4 } />
+                        <input type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
+                        <span onClick={ () => send() }>
+                            <p>Confirm and Send</p>
+                        </span>
+                    </form>
+                </div>
+                </div>
+
+
+            </div>
         </>
     )
 }
