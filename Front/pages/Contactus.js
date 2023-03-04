@@ -4,10 +4,12 @@ import styles from '../styles/contact.module.css'
 import api from '../components/api.js'
 export default function Contactus() {
     var [ name, setname ] = useState( '' )
-    var [ phone, setphone ] = useState('')
+    var [ phone, setphone ] = useState( '' )
     var [ note, setnote ] = useState( '' )
     var [ activity, setactivity ] = useState( '' )
     var [ residence, setresidence ] = useState( '' )
+    var [ alert, setalert ] = useState( <></> )
+
 
     const handleChange1 = ( event ) => {
         var value = event.target.value;
@@ -18,6 +20,7 @@ export default function Contactus() {
         var value = event.target.value;
         setphone( value );
     };
+
     const handleChange4 = ( event ) => {
         var value = event.target.value;
         setactivity( value );
@@ -34,13 +37,33 @@ export default function Contactus() {
     };
 
     const send = async () => {
-        const respon = await ( await api.post( '/mail' ), {
+        var respon = ( await api.post( '/mail', {
             name: name,
             phone: phone,
             residence: residence,
             note: note,
             activity: activity
-        } ).data;
+        } ) ).data;
+        if ( respon.st == 'ok' ) {
+            setalert( <p style={ { color: 'green' } }>Your Message Was Sent Successfully</p> )
+        }
+        if ( respon.st == 'error' ) {
+            setalert( <p style={ { color: 'red' } }>There Has Been An Error, Please try Again</p> )
+        }
+        else {
+            setalert( <p style={ { color: 'red' } }>There Has Been An Error, Please try Again</p> )
+        }
+        setTimeout( clearNote, 2000 )
+    }
+
+    function clearNote() {
+        setalert( <p ></p> )
+    }
+
+    const reset = () => {
+        document.getElementById( 'form' ).reset()
+        setalert( <p style={ { color: 'green' } }>Form Cleared</p> )
+        setTimeout( clearNote, 2000 )
     }
 
     return (
@@ -51,28 +74,30 @@ export default function Contactus() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="favicon.png" />
             </Head>
+
             <div className={ styles.container }>
-                
                 <div className={ styles.form1 }>
-                <div className={ styles.form }>
-                    <img src='/logo.png' alt='' />
-                    <p>
-                        Required Informations
-                    </p>
-                    <form>
-                        <input type='text' placeholder='Name / الاسم' onChange={ handleChange1 } />
-                        <input type='text' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
-                        <input type='text' placeholder='Activity / نوع النشاط' onChange={ handleChange3 } />
-                        <input type='text' placeholder='Number of Residences or Investors / عدد الاقامات او المستثمرين' onChange={ handleChange4 } />
-                        <input type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
-                        <span onClick={ () => send() }>
-                            <p>Confirm and Send</p>
-                        </span>
-                    </form>
+                    <div className={ styles.form }>
+                        <img src='/logo.png' alt='' />
+                        <p>
+                            Required Informations
+                        </p>
+                        <form id='form'>
+                            <input type='text' placeholder='Name / الاسم' onChange={ handleChange1 } />
+                            <input type='text' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
+                            <input type='text' placeholder='Activity / نوع النشاط' onChange={ handleChange3 } />
+                            <input type='text' placeholder='Number of Residences or Investors / عدد الاقامات او المستثمرين' onChange={ handleChange4 } />
+                            <input type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
+                            <>{ alert }</>
+                            <span onClick={ send }>
+                                <p>Confirm and Send</p>
+                            </span>
+                            <span onClick={ reset } >
+                                <p>Clear Form</p>
+                            </span>
+                        </form>
+                    </div>
                 </div>
-                </div>
-
-
             </div>
         </>
     )

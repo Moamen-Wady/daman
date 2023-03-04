@@ -19,6 +19,8 @@
     margin-top: var(--rem2);
     margin-bottom: var(--rem2);
     margin-left: var(--rem2);
+    padding: var(--rem2);
+    padding-left: 0;
 }
 .form1 {
     width: calc(var(--rem5)*12);
@@ -49,11 +51,12 @@
 .form img {
     width: calc(var(--rem5) * 1.5);
     height: calc(var(--rem5) * 1.5);
+    text-align: left;
 }
 
 .form input {
     display: block;
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-top: 3%;
     background-color: rgb(240, 234, 186);
@@ -64,15 +67,15 @@
 .form span {
     display: block;
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
     background-color: white;
-    border: 2px solid black;
+    border: 1.5px solid black;
+    border-radius: 5%;
     height: var(--rem2);
-    width: 25%;
+    width: 100%;
     cursor: pointer;
     transition-property: width;
     transition-timing-function: ease-in-out;
+    padding: var(--rem05);
 }
 .form span > p {
     color: var(--black2);
@@ -101,4 +104,13 @@
     display: block;
     margin: auto;
     border: 1px solid gold;
+}
+
+
+.form button {
+appearance:none;
+padding: 0;
+background-color: transparent;
+border: 0;
+    margin: var(--rem1);
 }

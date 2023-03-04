@@ -4,38 +4,33 @@ const router = express.Router();
 
 router.route( '/mail' )
 router.post( '/mail', async ( req, res ) => {
+    const transporter = nodemailer.createTransport( {
+        service: 'gmail',
+        auth: {
+            user: 'moamen.wady@gmail.com',
+            pass: 'qavhjvedloxqislo'
+        }
+    } );
     var name = req.body.name;
     var phone = req.body.phone;
     var activity = req.body.activity;
     var residence = req.body.residence;
     var note = req.body.note;
-    var transporter = nodemailer.createTransport( {
-        service: 'gmail',
-        auth: {
-            user: 'moamen.wady@gmail.com',
-            pass: 'qavhjvedloxqislo'
-        },
-        tls: {
-            // do not fail on invalid certs
-            rejectUnauthorized: false
-        }
-    } );
     const mailOptions = {
-        from: 'reserverencebot@gmail.com',
+        from: 'moamen.wady@gmail.com',
         to: `amr.fissou@gmail.com`,
-        subject: 'Seat Registered',
-        text:   `name : ${ name }
-                phone: ${ phone }
-                activity: ${ activity }
-                residence: ${ residence }
-                notes: ${ note } `
+        subject: '<3',
+        html: name, phone, activity, residence, note
     }
     transporter.sendMail( mailOptions, function ( err, info ) {
-        if ( err )
+        if ( err ) {
             console.log( err )
-        else
+            res.send( { st: 'error' } )
+        }
+        else {
             console.log( info );
-        res.send( 'ok' )
+            res.send( { st: 'ok' } )
+        }
     } );
 } );
 
