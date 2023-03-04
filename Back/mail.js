@@ -16,11 +16,12 @@ router.post( '/mail', async ( req, res ) => {
     var activity = req.body.activity;
     var residence = req.body.residence;
     var note = req.body.note;
+    var mail = req.body.mail;
     const mailOptions = {
-        from: 'moamen.wady@gmail.com',
-        to: `amr.fissou@gmail.com`,
+        from: `${mail}`,
+        to: `moamen.wady@gmail.com`,
         subject: '<3',
-        html: name, phone, activity, residence, note
+        html: name, phone, activity, residence, note , mail
     }
     transporter.sendMail( mailOptions, function ( err, info ) {
         if ( err ) {

@@ -6,6 +6,7 @@ export default function Contactus() {
     var [ name, setname ] = useState( '' )
     var [ phone, setphone ] = useState( '' )
     var [ note, setnote ] = useState( '' )
+    var [ mail, setmail ] = useState( '' )
     var [ activity, setactivity ] = useState( '' )
     var [ residence, setresidence ] = useState( '' )
     var [ alert, setalert ] = useState( <></> )
@@ -35,6 +36,21 @@ export default function Contactus() {
         var value = event.target.value;
         setnote( value );
     };
+    const handleChange6 = ( event ) => {
+        var value = event.target.value;
+        setmail( value );
+    };
+
+    function taker( e ) {
+        e.preventDefault()
+        if ( name == null || phone == null || mail == null || activity == null || residence == null || note == null ) {
+            alert( "PLEASE FILL ALL FIELDS IN THE FORM ABOVE " );
+        }
+        else {
+            send();
+        }
+    };
+
 
     const send = async () => {
         var respon = ( await api.post( '/mail', {
@@ -42,15 +58,13 @@ export default function Contactus() {
             phone: phone,
             residence: residence,
             note: note,
-            activity: activity
+            activity: activity,
+            mail:mail
         } ) ).data;
         if ( respon.st == 'ok' ) {
             setalert( <p style={ { color: 'green' } }>Your Message Was Sent Successfully</p> )
         }
         if ( respon.st == 'error' ) {
-            setalert( <p style={ { color: 'red' } }>There Has Been An Error, Please try Again</p> )
-        }
-        else {
             setalert( <p style={ { color: 'red' } }>There Has Been An Error, Please try Again</p> )
         }
         setTimeout( clearNote, 2000 )
@@ -60,7 +74,8 @@ export default function Contactus() {
         setalert( <p ></p> )
     }
 
-    const reset = () => {
+    const reset = (e) => {
+        e.preventDefault()
         document.getElementById( 'form' ).reset()
         setalert( <p style={ { color: 'green' } }>Form Cleared</p> )
         setTimeout( clearNote, 2000 )
@@ -84,17 +99,18 @@ export default function Contactus() {
                         </p>
                         <form id='form'>
                             <input type='text' placeholder='Name / الاسم' onChange={ handleChange1 } />
-                            <input type='text' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
+                            <input type='email' placeholder='E-mail / الايميل' onChange={ handleChange6 } />
+                            <input type='tel' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
                             <input type='text' placeholder='Activity / نوع النشاط' onChange={ handleChange3 } />
                             <input type='text' placeholder='Number of Residences or Investors / عدد الاقامات او المستثمرين' onChange={ handleChange4 } />
                             <input type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
                             <>{ alert }</>
-                            <span onClick={ send }>
+                            <button onClick={ taker } ><span >
                                 <p>Confirm and Send</p>
-                            </span>
-                            <span onClick={ reset } >
+                            </span></button>
+                            <button><span onClick={ reset } >
                                 <p>Clear Form</p>
-                            </span>
+                            </span></button>
                         </form>
                     </div>
                 </div>
