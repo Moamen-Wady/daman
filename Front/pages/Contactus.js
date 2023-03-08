@@ -43,12 +43,10 @@ export default function Contactus() {
 
     function taker( e ) {
         e.preventDefault()
-        if ( name == null || phone == null || mail == null || activity == null || residence == null || note == null ) {
-            alert( "PLEASE FILL ALL FIELDS IN THE FORM ABOVE " );
+        if ( name === '' || phone === '' || mail === '' || activity === '' || residence === '' || note === '' ) {
+            window.alert( "PLEASE FILL ALL FIELDS IN THE FORM ABOVE " );
         }
-        else {
-            send();
-        }
+        else {send()}
     };
 
 
@@ -97,15 +95,15 @@ export default function Contactus() {
                         <p>
                             Required Informations
                         </p>
-                        <form id='form'>
+                        <form id='form' >
                             <input type='text' placeholder='Name / الاسم' onChange={ handleChange1 } />
                             <input type='email' placeholder='E-mail / الايميل' onChange={ handleChange6 } />
                             <input type='tel' placeholder='Your Phone Number / رقم التليفون' onChange={ handleChange2 } />
                             <input type='text' placeholder='Activity / نوع النشاط' onChange={ handleChange3 } />
                             <input type='text' placeholder='Number of Residences or Investors / عدد الاقامات او المستثمرين' onChange={ handleChange4 } />
-                            <input type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
+                            <textarea type='textbox' placeholder='Notes / ملاحظات' onChange={ handleChange5 } />
                             <>{ alert }</>
-                            <button onClick={ taker } ><span >
+                            <button onClick={ taker} ><span >
                                 <p>Confirm and Send</p>
                             </span></button>
                             <button><span onClick={ reset } >

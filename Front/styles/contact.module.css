@@ -62,6 +62,16 @@
     background-color: rgb(240, 234, 186);
     color: black;
     height: var(--rem2);
+    font-size: calc(var(--rem1) * 1.2);
+}
+.form textarea {
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgb(240, 234, 186);
+    color: black;
+    height: var(--rem5);
     font-size: calc(var(--rem1) * 1.25);
 }
 .form span {
