@@ -44,7 +44,7 @@ export default function Contactus() {
     function taker( e ) {
         e.preventDefault()
         if ( name === '' || phone === '' || mail === '' || activity === '' || residence === '' || note === '' ) {
-            window.alert( "PLEASE FILL ALL FIELDS IN THE FORM ABOVE " );
+            window.alert( "PLEASE FILL ALL FIELDS IN THE FORM " );
         }
         else {send()}
     };
